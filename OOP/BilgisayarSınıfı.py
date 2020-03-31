@@ -40,7 +40,7 @@ class Bilgisayar():
     def __str__(self):
         return "Pc durumu {}\nPC parlaklık:{}\n,Açık programlar:{}".format(self.durum,self.parlaklık,self.programlar)
     def __len__(self):
-        return  (self.programlar)
+        return  len(self.programlar)
 
 bilgisayar = Bilgisayar()
 while True:
@@ -71,7 +71,7 @@ while True:
     elif(islem == "6"):
         print(bilgisayar)
     elif(islem == "7"):
-        len(bilgisayar)
+      print(  len(bilgisayar))
     elif(islem == "q"):
         print("Programdan çıkılıyor.....")
         break
