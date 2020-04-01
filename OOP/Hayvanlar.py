@@ -7,17 +7,20 @@ class Hayvanlar():
         self.ayak_sayısı= ayak_sayısı
         self.dis_sayısı = dis_sayısı
     def ad_ekle(self,ad):
+        self.adı = ad
         print("Hayvanın Adı:"+ad)
     def soyad_ekle(self,soyad):
+        self.soyadı =soyad
         print("Hayvan Soyadı"+soyad)
     def ayak_sayısı_ekle(self,kac_ayak):
+        self.ayak_sayısı == kac_ayak
         print("Hayvanın ayak sayısı"+kac_ayak)
     def __str__(self):
-        return "HAyvanın Adı{}\nHayvanın Soyadı{}\nKaç Ayaklı  {}".format(self.adı,self.soyadı,self.ayak_sayısı)
+        return "HAyvanın Adı{}\nHayvanın Soyadı{}\nKaç Ayaklı  {}\n,Cinsi{}\n Parmak Sayısı{}\nDiş Sayısı{}".format(self.adı,self.soyadı,self.ayak_sayısı,self.cinsi,self.parmak_sayısı,self.dis_sayısı)
 class Kopekler(Hayvanlar):
        def cins_fonk (self,cins):
            self.cinsi = cins
-           print("Cinsi"+self.cins)
+           print("Cinsi"+cins)
 class Kuslar(Hayvanlar):
     def parmak_fonk(self, parmak):
         self.parmak_sayısı = parmak
@@ -44,19 +47,25 @@ while True:
     
     """)
     if(islem == "1"):
-        hayvan1.ad_ekle()
+        ad = input("Adını Ne ile Değiştirmek istersiniz ? ")
+        hayvan1.ad_ekle(ad)
     elif(islem == "2"):
-        hayvan1.soyad_ekle()
+        soyad = input("Soyadını Ne ile Değiştirmek istersiniz ? ")
+        hayvan1.soyad_ekle(soyad)
     elif(islem == "3"):
-        hayvan1.ayak_sayısı()
+        ayak_sayısı = input("Ayak Sayısı Kaç olsun ? ")
+        hayvan1.ayak_sayısı = ayak_sayısı
     elif (islem == "4"):
-        hayvan1.cins()
+        cinsii = input("Cinsini Ne ile Değiştirmek istersiniz ? ")
+        hayvan1.cins_fonksiyon(cinsii)
     elif (islem == "5"):
-        hayvan1.parmak_fonk()
+        parmak = input("Parmak sayısı Ne ile Değiştirmek istersiniz ? ")
+        hayvan1.parmak_fonk(parmak)
     elif(islem == "6"):
-        hayvan1.dis_sayısı()
+        dis = input("Siş Sayısı Ne ile Değiştirmek istersiniz ? ")
+        hayvan1.dis_sayısı(dis)
     elif(islem == "7"):
-        hayvan1.__str__()
+        print(hayvan1)
     elif(islem == "q"):
         print("Programdan çıkılıyor")
         break
