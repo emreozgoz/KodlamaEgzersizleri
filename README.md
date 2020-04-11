@@ -1,0 +1,3 @@
+# KodlamaEgzersizleri
+
+Python Egzersizlerim
